@@ -22,8 +22,14 @@ class Configuration implements ConfigurationInterface
     {
 
         // Create tree builder
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ambta_doctrine_encrypt');
+        $rootNode = null;
+        $treeBuilder = new TreeBuilder('ambta_doctrine_encrypt');
+        if (\method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            // BC layer for symfony/config 4.1 and older
+            $rootNode = $treeBuilder->root('ambta_doctrine_encrypt');
+        }
 
         // Grammar of config tree
         $rootNode
