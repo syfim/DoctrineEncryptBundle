@@ -9,8 +9,8 @@
     "paragonie/halite": "^4.3",
     "paragonie/sodium_compat": "^1.5",
     "doctrine/orm": "^2.5",
-    "symfony/property-access": "^4.1",
-    "symfony/dependency-injection": "^4.1",
+    "symfony/property-access": "^5.0.2",
+    "symfony/dependency-injection": "^4.0.1",
     "symfony/yaml": "^4.1",
     "symfony/http-kernel": "^4.1",
     "symfony/config": "^4.1"
